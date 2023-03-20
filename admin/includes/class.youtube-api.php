@@ -50,7 +50,7 @@ class YoutubeApi extends Youtube {
 	 * @return string
 	 */
 	public function getPlaylistUrlFromPlaylist( $playlist ) {
-		if ( $playlist->id ) {
+		if ( $playlist->id ?? false ) {
 			return "https://www.youtube.com/playlist?list={$playlist->id}";
 		}
 

@@ -26,7 +26,7 @@ abstract class PageSettingsBase extends PageBase {
 		foreach ( $this->settings as $group_slug => $group ) {
 			$group_slug = WYV_PLUGIN_PREFIX . '_' . $group_slug;
 			foreach ( $group['sections'] as $section ) {
-				$section_slug = WYV_PLUGIN_PREFIX . '_' . $section['slug'];
+				$section_slug = WYV_PLUGIN_PREFIX . '_' . ( $section['slug'] ?? '' );
 				foreach ( $section['options'] as $opt_name => $option ) {
 					$opt_name          = WYV_PLUGIN_PREFIX . '_' . $opt_name;
 					$opt_type          = $option['type'] ?? 'text';
@@ -40,7 +40,7 @@ abstract class PageSettingsBase extends PageBase {
 					] );
 					add_settings_field( $opt_name, $option['title'], $render_function, WYV_PLUGIN_PREFIX . '_settings_page', $section_slug, $opt_name );
 				}
-				add_settings_section( $section_slug, $section['title'], '', WYV_PLUGIN_PREFIX . '_settings_page' );
+				add_settings_section( $section_slug, $section['title'] ?? '', '', WYV_PLUGIN_PREFIX . '_settings_page' );
 			}
 		}
 	}

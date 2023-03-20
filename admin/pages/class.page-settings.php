@@ -63,7 +63,7 @@ class Page_Settings extends PageSettingsBase {
 		add_submenu_page( 'edit.php?post_type=video', $this->page_title, $this->page_menu_title, 'manage_options', WYV_PLUGIN_PREFIX . '_' . $this->id, [
 			$this,
 			'page_action',
-		], $this->page_menu_dashicon );
+		], 10 );
 	}
 
 

@@ -21,7 +21,7 @@ abstract class Plugin_Base {
 	 * @see self::app()
 	 * @var self
 	 */
-	private static $_instance; // @codingStandardsIgnoreLine
+	public static $_instance; // @codingStandardsIgnoreLine
 
 	/**
 	 * Plugin constructor.

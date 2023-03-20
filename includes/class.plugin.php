@@ -36,7 +36,7 @@ class Plugin extends Plugin_Base {
 	 */
 	public function admin_code() {
 		$this->register_page( 'Page_Settings' );
-		$this->register_page( 'Page_Main' );
+		//$this->register_page( 'Page_Main' );
 	}
 
 	public function global_code() {

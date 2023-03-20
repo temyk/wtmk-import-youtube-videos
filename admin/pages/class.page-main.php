@@ -27,7 +27,7 @@ class Page_Main extends PageBase {
 		add_submenu_page( 'edit.php?post_type=video', $this->page_title, $this->page_menu_title, 'manage_options', WYV_PLUGIN_PREFIX . '_' . $this->id, [
 			$this,
 			'page_action',
-		], $this->page_menu_dashicon );
+		], 11 );
 	}
 
 	public function page_action() {
